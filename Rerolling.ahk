@@ -3,48 +3,32 @@
 while (!found)
 {
 	 ; Looks for the first Mayhem Mod
-	ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *30 %A_ScriptDir%\Easy.png
-	if (ErrorLevel = 2)
-		MsgBox Could not conduct search 1.
-	else if (ErrorLevel = 1) 
-	{
-		Goto, Skip
-	}
-	else
+	ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *30 %A_ScriptDir%\Mod1.png
+	if (ErrorLevel != 1)
 		Mod1 := true
+	else 
+		Goto, Skip
 
 	 ; Looks for the second Mayhem Mod
-	ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *30 %A_ScriptDir%\Medium.png
-	if (ErrorLevel = 2)
-		MsgBox Could not conduct search 2.
-	else if (ErrorLevel = 1) 
-	{
-		Goto, Skip
-	}
-	else
+	ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *30 %A_ScriptDir%\Mod2.png
+	if (ErrorLevel != 1)
 		Mod2 := true
+	else 
+		Goto, Skip
 
 	 ; Looks for the third Mayhem Mod
-	ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *30 %A_ScriptDir%\Hard.png
-	if (ErrorLevel = 2)
-		MsgBox Could not conduct search 3.
-	else if (ErrorLevel = 1) 
-	{
-		 Goto, Skip
-	}
-	else
+	ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *30 %A_ScriptDir%\Mod3.png
+	if (ErrorLevel != 1)
 		Mod3 := true
+	else 
+		Goto, Skip
 
 	 ; Looks for the fourth Mayhem Mod
-	ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *30 %A_ScriptDir%\VeryHard.png
-	if (ErrorLevel = 2)
-		MsgBox Could not conduct search 4.
-	else if (ErrorLevel = 1) 
-	{
-		Goto, Skip
-	}
-	else
+	ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *30 %A_ScriptDir%\Mod4.png
+	if (ErrorLevel != 1)
 		Mod4 := true
+	else 
+		Goto, Skip
 
 	Skip:
 
